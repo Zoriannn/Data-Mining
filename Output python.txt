@@ -1,0 +1,280 @@
+
+The columns are:  
+Index(['HeartDisease', 'BMI', 'Smoking', 'AlcoholDrinking', 'Stroke',
+       'PhysicalHealth', 'MentalHealth', 'DiffWalking', 'Sex', 'AgeCategory',
+       'Race', 'Diabetic', 'PhysicalActivity', 'GenHealth', 'SleepTime',
+       'Asthma', 'KidneyDisease', 'SkinCancer'],
+      dtype='object')
+
+
+Number of X tuples = 319795
+
+
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 319795 entries, 0 to 319794
+Data columns (total 18 columns):
+ #   Column            Non-Null Count   Dtype  
+---  ------            --------------   -----  
+ 0   HeartDisease      319795 non-null  object 
+ 1   BMI               319795 non-null  float64
+ 2   Smoking           319795 non-null  object 
+ 3   AlcoholDrinking   319795 non-null  object 
+ 4   Stroke            319795 non-null  object 
+ 5   PhysicalHealth    319795 non-null  int64  
+ 6   MentalHealth      319795 non-null  int64  
+ 7   DiffWalking       319795 non-null  object 
+ 8   Sex               319795 non-null  object 
+ 9   AgeCategory       319795 non-null  object 
+ 10  Race              319795 non-null  object 
+ 11  Diabetic          319795 non-null  object 
+ 12  PhysicalActivity  319795 non-null  object 
+ 13  GenHealth         319795 non-null  object 
+ 14  SleepTime         319795 non-null  int64  
+ 15  Asthma            319795 non-null  object 
+ 16  KidneyDisease     319795 non-null  object 
+ 17  SkinCancer        319795 non-null  object 
+dtypes: float64(1), int64(3), object(14)
+memory usage: 43.9+ MB
+None
+
+
+
+  HeartDisease    BMI Smoking  ... Asthma KidneyDisease  SkinCancer
+0           No  16.60     Yes  ...    Yes            No         Yes
+1           No  20.34      No  ...     No            No          No
+2           No  26.58     Yes  ...    Yes            No          No
+3           No  24.21      No  ...     No            No         Yes
+4           No  23.71      No  ...     No            No          No
+
+[5 rows x 18 columns]
+
+
+
+The unique values for each column : 
+HeartDisease           2
+BMI                 3604
+Smoking                2
+AlcoholDrinking        2
+Stroke                 2
+PhysicalHealth        31
+MentalHealth          31
+DiffWalking            2
+Sex                    2
+AgeCategory           13
+Race                   6
+Diabetic               4
+PhysicalActivity       2
+GenHealth              5
+SleepTime             24
+Asthma                 2
+KidneyDisease          2
+SkinCancer             2
+dtype: int64
+
+
+
+The number of missing values for each column : 
+HeartDisease column missing values: 0
+BMI column missing values: 0
+Smoking column missing values: 0
+AlcoholDrinking column missing values: 0
+Stroke column missing values: 0
+PhysicalHealth column missing values: 0
+MentalHealth column missing values: 0
+DiffWalking column missing values: 0
+Sex column missing values: 0
+AgeCategory column missing values: 0
+Race column missing values: 0
+Diabetic column missing values: 0
+PhysicalActivity column missing values: 0
+GenHealth column missing values: 0
+SleepTime column missing values: 0
+Asthma column missing values: 0
+KidneyDisease column missing values: 0
+SkinCancer column missing values: 0
+
+
+
+The statistics measure for BMI, Physical Health, Mental Health and Sleep Time
+BMI: 
+mean = 28.33, 
+max = 94.85, 
+min = 12.02, 
+std = 6.36
+
+PhysicalHealth: 
+mean = 3.37, 
+max = 30.00, 
+min = 0.00, 
+std = 7.95
+
+MentalHealth: 
+mean = 3.90, 
+max = 30.00, 
+min = 0.00, 
+std = 7.96
+
+SleepTime: 
+mean = 7.10, 
+max = 24.00, 
+min = 1.00, 
+std = 1.44
+The outliers for BMI, Physical Health, Mental Health and Sleep Time
+
+
+Outlier of the BMI
+Outliers:
+       HeartDisease    BMI Smoking  ... Asthma KidneyDisease  SkinCancer
+32               No  45.35      No  ...     No            No          No
+57               No  46.52     Yes  ...    Yes            No          No
+90               No  44.29      No  ...     No            No         Yes
+105              No  58.54      No  ...    Yes            No          No
+107              No  45.42      No  ...    Yes            No          No
+...             ...    ...     ...  ...    ...           ...         ...
+319693           No  44.29      No  ...     No            No          No
+319709           No  51.46     Yes  ...    Yes            No          No
+319725           No  53.16      No  ...    Yes            No          No
+319777           No  42.57      No  ...     No            No          No
+319794           No  46.56      No  ...     No            No          No
+
+[10396 rows x 18 columns]
+Number of heart disease cases related to BMI outliers: 1183
+Number of no heart disease cases related to BMI outliers: 9213
+
+
+Outlier of the Physical Health
+Outliers:
+       HeartDisease    BMI Smoking  ... Asthma KidneyDisease  SkinCancer
+2                No  26.58     Yes  ...    Yes            No          No
+4                No  23.71      No  ...     No            No          No
+5               Yes  28.87     Yes  ...     No            No          No
+6                No  21.63      No  ...    Yes            No         Yes
+10              Yes  34.30     Yes  ...    Yes            No          No
+...             ...    ...     ...  ...    ...           ...         ...
+319774           No  20.36      No  ...     No            No          No
+319779           No  23.38     Yes  ...     No            No          No
+319782           No  31.89     Yes  ...     No            No          No
+319787           No  36.54      No  ...     No            No          No
+319790          Yes  27.41     Yes  ...    Yes            No          No
+
+[47146 rows x 18 columns]
+Number of heart disease cases related to Physical Health outliers: 8944
+Number of no heart disease cases related to Physical Health outliers: 38202
+
+
+Outlier of the Mental Health
+Outliers:
+       HeartDisease    BMI Smoking  ... Asthma KidneyDisease  SkinCancer
+0                No  16.60     Yes  ...    Yes            No         Yes
+2                No  26.58     Yes  ...    Yes            No          No
+14               No  29.29     Yes  ...     No            No          No
+17               No  22.59     Yes  ...     No            No          No
+22               No  26.17     Yes  ...     No            No          No
+...             ...    ...     ...  ...    ...           ...         ...
+319754           No  26.95      No  ...     No            No          No
+319760           No  24.79      No  ...     No            No          No
+319765          Yes  38.45      No  ...    Yes            No          No
+319780           No  30.67      No  ...     No            No          No
+319782           No  31.89     Yes  ...     No            No          No
+
+[51576 rows x 18 columns]
+Number of heart disease cases related to Mental Health outliers: 5211
+Number of no heart disease cases related to Mental Health outliers: 46365
+
+
+Outlier of the Sleep Time
+Outliers:
+       HeartDisease    BMI Smoking  ... Asthma KidneyDisease  SkinCancer
+5               Yes  28.87     Yes  ...     No            No          No
+10              Yes  34.30     Yes  ...    Yes            No          No
+50               No  26.61      No  ...    Yes            No          No
+206              No  35.11     Yes  ...     No            No          No
+235              No  43.54      No  ...     No            No          No
+...             ...    ...     ...  ...    ...           ...         ...
+319373           No  24.03      No  ...     No            No          No
+319394           No  33.13      No  ...     No           Yes          No
+319408           No  38.86      No  ...     No            No          No
+319702           No  24.41      No  ...     No            No          No
+319793           No  32.81      No  ...     No            No          No
+
+[4543 rows x 18 columns]
+Number of heart disease cases related to Sleep Time outliers: 772
+Number of no heart disease cases related to Sleep Time outliers: 3771
+
+
+
+The test score, mean test score and standard deviation test score for K Fold Cross Validation for 3 model
+
+
+K Nearest Neighbors model : test scores: [0.9533843143002474, 0.9528584114284729, 0.9520303474437452, 0.9529011121648417, 0.9539011983791706]
+K Nearest Neighbors model : mean test score: 0.9530150767432956
+K Nearest Neighbors model : standard deviation of test scores: 0.0006210912439301267
+
+
+Decision Tree model : test scores: [0.9350294419394608, 0.9358657137191678, 0.9350892318303302, 0.9350116389343909, 0.9366669540477628]
+Decision Tree model : mean test score: 0.9355325960942225
+Decision Tree model : standard deviation of test scores: 0.000650978902137368
+
+
+Ensemble model : test scores: [0.9572725470079575, 0.9571432266296523, 0.9564272782136392, 0.9568497284248643, 0.9583929649107682]
+Ensemble model : mean test score: 0.9572171490373764
+Ensemble model : standard deviation of test scores: 0.0006557393156306075
+
+
+
+Shape of training feature: (463961, 17)
+Shape of testing feature: (115991, 17)
+Shape of training label: (463961,)
+Shape of testing label: (115991,)
+
+
+The accuracy for train set and test set for KNN model, Decision Tree model and Ensemble model
+KNN model train set accuracy:  0.9637103118581087
+KNN model test set accuracy:  0.9538326249450388
+
+
+Decision tree model train set accuracy:  0.9969156890342076
+Decision tree model test set accuracy:  0.9323137139950514
+
+
+Ensemble model train set accuracy:  0.9968574944876832
+Ensemble model test set accuracy:  0.943805984947108
+
+
+
+The evaluation the performance of KNeighborsClassifier model
+Test set evaluation:
+Accuracy: 0.9538326249450388
+Precision: 0.8858942947147357
+Recall: 0.7142151675485009
+F1 Score: 0.7908448228723196
+Cohens Kappa Score: 0.7652326884364868
+Area Under Curve: 0.9187801285273195
+Confusion Matrix:
+ [[100512   1304]
+ [  4051  10124]]
+
+The evaluation the performance of Decision Tree Classifier model
+Test set evaluation:
+Accuracy: 0.9323137139950514
+Precision: 0.7152777777777778
+Recall: 0.7411640211640211
+F1 Score: 0.7279908533416485
+Cohens Kappa Score: 0.6893525794328367
+Area Under Curve: 0.8545339838410998
+Confusion Matrix:
+ [[97634  4182]
+ [ 3669 10506]]
+
+The evaluation the performance of Ensemble Model
+Test set evaluation:
+Accuracy: 0.943805984947108
+Precision: 0.7941605839416058
+Recall: 0.7291710758377425
+F1 Score: 0.7602795145274
+Cohens Kappa Score: 0.7285177041457946
+Area Under Curve: 0.923293707610187
+Confusion Matrix:
+ [[99137  2679]
+ [ 3839 10336]]
